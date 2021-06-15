@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+.united {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(170, 20, 230);
+    text-decoration: underline;
+}
+.gradient {
+    background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 0.8435749299719888) 50%,
+        rgba(252, 176, 69, 1) 100%
+    );
+    height: 100vh;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* height: 100%; */
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+input {
+    border: 2px double #4c68c5;
+    height: 30px;
+    width: 200px;
+}
+input:hover {
+    background-color: lightskyblue;
+    transition-duration: 0.5s;
+}
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(17, 4, 22);
+}
+a:hover {
+    transition: 0.5s;
+    color: #4c68c5;
+}
+
+p {
+    font-size: 20px;
+}
+
+header {
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+header * {
+    display: inline;
+    margin-left: auto;
+}
+
+header li {
+    margin: 15px;
+}
+
+header li a {
+    text-decoration: none;
+    color: rgb(37, 29, 22);
+}
+#canvas {
+    border: #4cb1c5 dotted 2px;
+    width: 400px;
+    height: 80px;
+}
+
+/* Login-Page */
+.login-form {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-input {
+    width: 100px;
+}
+
+.password-input {
+    width: 100px;
+}
+
+button {
+    /* width: 25%; */
+    padding: 3px;
+    border: 3px double rgb(224, 48, 48);
+    cursor: pointer;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: crimson;
+    background-color: darkorange;
+    transition-duration: 0.5s;
+}
+button:focus {
+    outline: none;
+}
+
+/* Registeration-Page */
+.form-registeration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-btn {
+    width: 140px;
+    padding: 8px;
+}
+
+/* Petition-Page */
+
+.petition-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.youtube-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.deleteUserSignature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn {
+    width: 140px;
+    height: 35px;
+    font-size: 18px;
+    margin-top: 25px;
+    border: 4px double rgb(233, 99, 10);
+}
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Thanks Page */
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#thanks-form {
+    height: 100px;
+}
+
+.thanks-signature-container {
+    border: 3px dotted rgb(7, 134, 238);
+}
+
+/* Edit-Page */
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Signers-Page */
+.signers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

@@ -1,0 +1,28 @@
+<form class="login-form" method="post">
+    <div class="login-container">
+        <h2>Login here</h2>
+        {{#if error}}
+        <h2 class="hidden">Please try again..!</h2>
+        {{/if }}
+        {{#if noUser}}
+        <h3>No user exists.</h3>
+        {{/if }}
+
+        {{#if wrongPassword}}
+            <h3>Sorry, wrong password, please try again with correct password</h3>
+        {{/if }}
+        
+    <div class="email-input ">
+        <label for="email">Email-Address</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div class="password-input">
+        <label for="hash_password">Password</label>
+        <input type="password" name="hash_password" id="hash_password" required>
+    </div>
+    <div class="login-btn">
+        <button>Login</button>
+    </div>
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+    </div>
+</form>

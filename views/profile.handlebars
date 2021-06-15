@@ -1,0 +1,28 @@
+{{>navbar}}
+<h3>
+    Please ellobrate about yourself without hesitation.! 
+</h3>
+
+{{#if error}}
+<h3>{{ error }}</h3>
+{{/if}}
+<form method="post">
+    <div class="profile-container">
+        <div class="age-container">
+            <label for="age">Age</label>
+            <input type="number" name="age" />
+        </div> 
+        <div class="city-container">
+            <label for="city">City</label>
+            <input type="text" name="city" />
+        </div>
+        <div class="homepage-url">
+            <label for="url" >Homepage</label>
+            <input type="url" name="url" placeholder="https://homepage.com" />
+        </div>
+        <div class="profile-continue-button">
+            <button class="profile-continue">Contiue</button>
+            </div>
+    </div>
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+</form>

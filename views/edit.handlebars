@@ -1,0 +1,33 @@
+{{>navbar}}
+<form method="post" autocomplete="off">
+    {{#userInfo}}
+        <div class="edit-container">
+            <h2>Here you can edit your profile</h2>
+            <label for="first_name">First Name</label>
+            <input name="first_name" type="text" id="first_name" value="{{first_name}}">
+
+            <label for="last_name">Last Name</label>
+            <input name="last_name" type="text" id="last_name" value="{{last_name}}">
+ 
+            <label for="email">Email</label>
+            <input name="email" type="email" id="emailId" value="{{email}}">
+
+            <label for="hash_pasword">Password</label>
+            <input name="hash_password" type="password" id="hash_password" >
+
+            <label for="age">Age</label>
+            <input type="number" name="age" value="{{age}}" >
+            
+            <label for="city">City</label>
+            <input type="text" name="city" value="{{city}}">
+
+            <label for="url" >Homepage</label>
+            <input type="url" name="url" placeholder="https://homepage.com" value="{{url}}">
+            
+        {{/userInfo}}
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div>
+            <button class="submit-btn" type="submit">Update</button>
+        </div>
+    </div>
+</form>

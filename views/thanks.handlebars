@@ -1,0 +1,19 @@
+{{>navbar}}
+
+<div class="thanks-container">
+    <h2>Thank you</h2>
+    <br>
+    <h3>You will appreciate your time for signing the Petition!🧾</h3>
+    <div class="signature-box">
+        <img class="thanks-signature-container" src="{{signature}}" alt="signature of supports" />
+        <br>
+        <p><a href="/signers">🔹Click here to see people who signed the Petition</a></p>
+        
+        <p><a href="/profile/edit">🔹Click here to edit your profile</a></p>
+    </div>
+    <form method="POST">
+        <button class="deleteUserSignature">Delete your signature</button>
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+    </form>
+    
+</div>

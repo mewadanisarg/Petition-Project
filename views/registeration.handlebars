@@ -1,0 +1,29 @@
+{{#if error}}
+    <p>{{error}}</p>
+{{/if}}
+
+<form class="form-registeration-container" action="" method="post">
+<h2>Please register your profile.!!</h2>
+    <div class="registeration-container">
+            <div class="input">
+                <label for="first_name">First Name</label>
+                <input name="first_name" type="text" id="first_name" required>
+
+                <label for="last_name">Last Name</label>
+                <input name="last_name" type="text" id="last_name" required>
+
+                <label for="email">Email</label>
+                <input name="email" type="email" id="emailId" required>
+
+                <label for="hash_pasword">Password</label>
+                <input name="hash_password" type="password" id="hash_password" required>
+            </div>
+        <button class="signup-btn" type="submit">Get set, Sign Up</button>
+        <div class="signed-up">
+            <h4>
+                Already signed up the petitions, then please <a href="/login">login here.</a>
+            </h4>
+        </div>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    </div>
+</form>

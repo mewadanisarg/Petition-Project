@@ -1,0 +1,46 @@
+{{>navbar}}
+<main>
+    <div class="signers-container">
+
+        <h2>Welcome to Signers Page</h2>
+        {{#if belongToCity}}
+            <h4>Here are all the memebers from {{belongToCity}} who signed</h4>
+        {{else}}
+            <h4>All {{totalSigners}} members who signed Petition </h4>
+        {{/if }}
+
+        <div class="signers-box">
+            <h2>All Signers</h2>
+            {{#signers}}
+                {{#if url}}
+                    <p>
+                        <a target="_blank" href="{{url}}">{{first_name}} {{last_name}}</a>
+                        {{#if age}}
+                            {{age}}
+                        {{/if}}
+                        {{#if city}}
+                            {{!-- {{city}} --}}
+                                <a href="/signers/{{city}}">{{city}}</a>
+                        {{/if}}
+                    </p>
+                {{else}}
+                    <p>{{first_name}} {{last_name}}
+                        {{#if age}}
+                            {{age}}
+                        {{/if}}
+                        {{#if city}}
+                            {{!-- {{city}} --}}
+                                <a href="/signers/{{city}}">{{city}}</a>
+                        {{/if}}
+                    </p>
+                {{/if}}  
+                
+            {{/signers}}
+                <p><a href="/thanks">Thanks Page</a></p>
+            {{#if belongToCity}}
+                <a href="/signers">Back to all signers</a>
+            {{/if}}
+        </div>
+    </div>
+
+</main>

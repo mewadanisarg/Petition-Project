@@ -1,0 +1,29 @@
+{{>navbar}}
+<div class="petition-box" >
+    <h2>Sign our Petition to make Youtube ad-free again as before..!🆓<h2>
+        <img class="youtube-image" src="https://miro.medium.com/max/1200/1*G2tzoiJeXK8JCDxiBRpoTw.jpeg" alt="image">
+        {{#if error}}
+        <p class="errormessage">{{error}}</p>
+        {{/if}}
+        <p class="errormesaage"></p>
+        <div class="form-petitions-container">
+            <form id="form-box" method="POST">
+                {{#if error}}
+                    <h3>Please try again, something went wrong.</h3>
+                {{/if}}
+
+                <input name="signature" type="hidden" id="signature" required>
+                {{!-- Prevents CSRF Attack --}}
+
+                <div id="signature-canvasbox">
+                    <canvas id="canvas" height="80px" width="400px"></canvas>
+                </div>
+                <div class="submit">
+                    <button class="submit-btn" type="submit" id="submit-sign">Submit here</button>
+                </div>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            </form>
+        </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/script.js"></script>
